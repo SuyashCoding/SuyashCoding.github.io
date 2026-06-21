@@ -29,6 +29,10 @@ body{
 ===================================== */
 
 .sidebar{
+    overflow-y: auto;
+    scrollbar-width: thin; 
+    scrollbar-color: #888 transparent; /* thumb color, track color */
+    
     width:350px;
     position:fixed;
     height:100vh;
