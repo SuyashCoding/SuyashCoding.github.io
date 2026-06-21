@@ -1,1 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Suyash Patel | AI Researcher</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#0A192F;
+    --bg-light:#112240;
+    --accent:#64FFDA;
+    --text:#CCD6F6;
+    --text-secondary:#8892B0;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    min-height:100vh;
+}
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sidebar{
+    width:350px;
+    position:fixed;
+    height:100vh;
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.name{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.role{
+    font-size:22px;
+    color:var(--accent);
+    margin-bottom:20px;
+}
+
+.tagline{
+    color:var(--text-secondary);
+    line-height:1.7;
+}
+
+.nav{
+    margin-top:40px;
+}
+
+.nav a{
+    display:block;
+    text-decoration:none;
+    color:var(--text-secondary);
+    padding:10px 0;
+    transition:.3s;
+}
+
+.nav a:hover{
+    color:var(--accent);
+    transform:translateX(6px);
+}
+
+.socials{
+    margin-top:40px;
+}
+
+.socials a{
+    display:inline-block;
+    margin-right:15px;
+    color:var(--text-secondary);
+    text-decoration:none;
+}
+
+.socials a:hover{
+    color:var(--accent);
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.content{
+    margin-left:350px;
+    width:calc(100% - 350px);
+    padding:80px;
+}
+
+section{
+    margin-bottom:120px;
+}
+
+.section-title{
+    color:var(--accent);
+    font-size:14px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+p{
+    color:var(--text-secondary);
+    line-height:1.8;
+}
+
+.hero h1{
+    font-size:72px;
+    line-height:1.1;
+}
+
+.hero h3{
+    font-size:28px;
+    color:var(--text-secondary);
+    margin-top:10px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:700px;
+}
+
+/* =====================================
+   CARDS
+===================================== */
+
+.card{
+    background:var(--bg-light);
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    margin-bottom:15px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tag{
+    padding:6px 12px;
+    border-radius:50px;
+    background:rgba(100,255,218,.12);
+    color:var(--accent);
+    font-size:13px;
+}
+
+/* =====================================
+   ACHIEVEMENTS
+===================================== */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.achievement{
+    background:var(--bg-light);
+    padding:25px;
+    border-radius:12px;
+}
+
+.achievement h4{
+    margin-bottom:10px;
+}
+
+/* =====================================
+   SKILLS
+===================================== */
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.skill-box{
+    background:var(--bg-light);
+    padding:25px;
+    border-radius:12px;
+}
+
+.skill-box ul{
+    list-style:none;
+}
+
+.skill-box li{
+    margin-bottom:10px;
+    color:var(--text-secondary);
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.btn{
+    display:inline-block;
+    padding:12px 22px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    text-decoration:none;
+    border-radius:6px;
+    transition:.3s;
+    margin-right:10px;
+}
+
+.btn:hover{
+    background:rgba(100,255,218,.08);
+}
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact{
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact p{
+    max-width:600px;
+    margin:auto;
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:900px){
+
+    body{
+        display:block;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        padding:40px;
+    }
+
+    .content{
+        margin-left:0;
+        width:100%;
+        padding:40px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div>
+
+        <div class="name">Suyash Patel</div>
+
+        <div class="role">
+            AI & Computer Vision Researcher
+        </div>
+
+        <p class="tagline">
+            Computer Science student specializing in Artificial Intelligence,
+            Machine Learning, Computer Vision, and real-world AI applications.
+        </p>
+
+        <div class="nav">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#skills">Skills</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+
+    <div class="socials">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+    </div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="content">
+
+<section class="hero">
+
+    <div class="section-title">
+        Welcome
+    </div>
+
+    <h1>
+        Building Intelligent Systems
+    </h1>
+
+    <h3>
+        AI • Machine Learning • Computer Vision
+    </h3>
+
+    <p>
+        I am a Computer Science student at NC State University focused on
+        Artificial Intelligence and Computer Vision. My work spans
+        deep learning, object detection, image segmentation,
+        biometric identification, and applied AI research.
+    </p>
+
+</section>
+
+<section id="about">
+
+    <div class="section-title">About</div>
+
+    <p>
+        My passion lies in developing intelligent systems that solve
+        real-world problems through machine learning and computer vision.
+        I have experience conducting research, building AI models,
+        optimizing training pipelines, and deploying solutions
+        for practical applications.
+    </p>
+
+</section>
+
+<section id="research">
+
+    <div class="section-title">Research</div>
+
+    <div class="card">
+
+        <h3>
+            IEEE ICAD 2026 Publication
+        </h3>
+
+        <p>
+            Published peer-reviewed research introducing a novel
+            multi-stage deep learning architecture that combines
+            SIFT and VGG feature fusion techniques for animal
+            biometric identification.
+        </p>
+
+        <div class="tags">
+            <div class="tag">Computer Vision</div>
+            <div class="tag">Deep Learning</div>
+            <div class="tag">IEEE</div>
+            <div class="tag">Research</div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <div class="section-title">Projects</div>
+
+    <div class="card">
+
+        <h3>
+            Cattle Biometric Identification System
+        </h3>
+
+        <p>
+            Developed AI-powered computer vision solutions using
+            U-Net and YOLOv5 for livestock identification,
+            ownership verification, health monitoring,
+            and insurance tracking.
+        </p>
+
+        <div class="tags">
+            <div class="tag">YOLOv5</div>
+            <div class="tag">U-Net</div>
+            <div class="tag">Python</div>
+            <div class="tag">Roboflow</div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="achievements">
+
+    <div class="section-title">Achievements</div>
+
+    <div class="grid">
+
+        <div class="achievement">
+            <h4>IEEE Publication</h4>
+            <p>Published at IEEE ICAD 2026.</p>
+        </div>
+
+        <div class="achievement">
+            <h4>Patent Holder</h4>
+            <p>Patent No. 416708.</p>
+        </div>
+
+        <div class="achievement">
+            <h4>Ignite Award</h4>
+            <p>Dr. APJ Abdul Kalam Ignite Award.</p>
+        </div>
+
+        <div class="achievement">
+            <h4>Python Certifications</h4>
+            <p>PCAP and PCEP certified.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <div class="section-title">Skills</div>
+
+    <div class="skills">
+
+        <div class="skill-box">
+            <h3>Programming</h3>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C</li>
+                <li>SQL</li>
+                <li>MATLAB</li>
+            </ul>
+        </div>
+
+        <div class="skill-box">
+            <h3>AI & ML</h3>
+            <ul>
+                <li>Machine Learning</li>
+                <li>Deep Learning</li>
+                <li>Computer Vision</li>
+                <li>Image Segmentation</li>
+                <li>Object Detection</li>
+            </ul>
+        </div>
+
+        <div class="skill-box">
+            <h3>Tools</h3>
+            <ul>
+                <li>YOLOv5</li>
+                <li>U-Net</li>
+                <li>Git</li>
+                <li>Linux</li>
+                <li>Roboflow</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="resume">
+
+    <div class="section-title">Resume</div>
+
+    <a href="#" class="btn">Download Resume</a>
+    <a href="#" class="btn">View Resume</a>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <div class="section-title">Contact</div>
+
+    <h2>Let's Connect</h2>
+
+    <p>
+        Interested in AI research, machine learning,
+        software engineering, or collaboration opportunities?
+    </p>
+
+    <br><br>
+
+    <a href="mailto:your-email@example.com" class="btn">
+        Say Hello
+    </a>
+
+</section>
+
+</div>
+
+</body>
+</html>
